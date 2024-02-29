@@ -1,0 +1,46 @@
+.t-wrapper{
+    margin-top: 40px;
+}
+
+.t-container{
+    overflow: hidden;
+    /* width: 90%; */
+}
+
+.t-card{
+     gap:2rem;
+    align-items: start !important;
+    justify-content: flex-start !important;
+    max-width: max-content;
+    height:25rem;
+    padding: 1rem;
+    flex-direction: row;
+    margin: 1rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 300ms ease-in;
+}
+.star-icon{
+    color: var(--blue);
+    padding-top: .5rem;
+    font-size: 1.3rem;
+}
+.card-profile{
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    flex-grow: 1;
+}
+.card-profile>img{
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    border: 3px solid var(--blue);
+}
+.card-profile>p{
+    font-size: 1.4rem;
+    /* margin-top: .8rem; */
+    margin-left: 1rem;
+    flex-wrap: nowrap;
+    
+}

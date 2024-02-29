@@ -1,0 +1,110 @@
+.h-wrapper{
+    color: white;
+    position: relative;
+    padding-bottom: 2px;
+    height: 85vh;
+    /* background-color: var(--black); */
+}
+.h-container{
+    justify-content: space-around !important;
+    align-items: flex-end;
+}
+.image-container{
+    width: 30rem;
+    height: 30rem;
+    overflow: hidden;
+    border-radius: 30rem 30rem 30rem 30rem; 
+     border: 8px solid rgba(255,2255, 255,.13);
+    background: var(--blue-gradient);
+}
+.image-container>img{
+    width: 100%;
+}
+.hero-title>span{
+    color: var(--black);
+    /* font-size: 4rem; */
+}
+.descriptiption{
+    padding: 10px;
+}
+.hero-title{
+    position: relative;
+    z-index: 1;
+    font-weight: 800 !important;
+    font-size: 3.5rem !important;
+    line-height: 4.3rem;
+}
+.secondaryText{
+    font-size: 1.2rem !important;
+    line-height: 1.9rem;
+}
+.h-button{
+    margin-top: 1rem;
+    
+}
+.h-button button{
+    padding: 1rem 1.9rem;
+    margin: 5px;
+    font-size: 1.1rem;
+}
+.h-button .talk
+{
+    border: 3px solid var( --blue);
+    background: white;
+    color: black;
+    font-weight: 600;
+}
+.stats{
+    width: 100%;
+    margin-top: 1.2rem;
+    justify-content: space-between !important;
+}
+.state{
+    transition: all 300ms ease-in;
+    padding: 1rem;
+    gap: .7rem;
+}
+
+.icon{
+    font-size: 2rem;
+    margin-top: .2rem;
+    color: var(--blue) !important;
+}
+.triangle, .circle{
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    right: 8.8rem;
+    top: 3rem;
+    font-size: 2.5rem;
+    overflow: hidden;
+    border-radius: 30rem 30rem 30rem 30rem; 
+     /* border: 8px solid rgba(255,2255, 255,.13); */
+    background: var(--orange-gradient);
+}
+.triangle >svg, .circle>svg{
+    margin-left: .8rem;
+    margin-top: .8rem;
+}
+
+.circle{
+    right: 30rem;
+    top: 23rem;
+}
+
+@media (max-width:640px) {
+
+    .triangle{
+        
+        top: 38rem;
+        
+    }
+    
+    .circle{
+        top: 58rem;
+    }
+    .about-wrapper{
+        margin-top: 25rem;
+    }
+
+}
