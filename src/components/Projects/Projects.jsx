@@ -1,5 +1,5 @@
 import { FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
-import { projects } from "../../data/profile";
+import { profile, projects } from "../../data/profile";
 import Reveal from "../Reveal";
 import "./Projects.css";
 
@@ -12,7 +12,9 @@ export default function Projects() {
         <Reveal className="section-head">
           <span className="eyebrow">Portfolio</span>
           <h2 className="primaryText">Featured projects</h2>
-          <p className="secondaryText">A selection of things I&apos;ve designed, built and shipped.</p>
+          <p className="secondaryText">
+            A few highlights from {profile.projectsCount} projects: AI chatbots, agents and full-stack web apps.
+          </p>
         </Reveal>
 
         <div className="projects-grid">

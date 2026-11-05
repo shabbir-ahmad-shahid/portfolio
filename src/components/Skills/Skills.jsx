@@ -1,14 +1,32 @@
 import {
   SiCss3,
+  SiElementor,
   SiExpress,
+  SiGithub,
   SiHtml5,
   SiJavascript,
   SiLaravel,
+  SiMysql,
   SiNodedotjs,
   SiPhp,
   SiReact,
+  SiWoocommerce,
+  SiWordpress,
 } from "react-icons/si";
-import { FaCode } from "react-icons/fa6";
+import {
+  FaBrain,
+  FaCode,
+  FaCodePullRequest,
+  FaComments,
+  FaDatabase,
+  FaKeyboard,
+  FaPlug,
+  FaPuzzlePiece,
+  FaRobot,
+  FaServer,
+  FaTerminal,
+  FaWandMagicSparkles,
+} from "react-icons/fa6";
 import { profile, skills } from "../../data/profile";
 import Reveal from "../Reveal";
 import "./Skills.css";
@@ -22,6 +40,22 @@ const icons = {
   laravel: <SiLaravel />,
   node: <SiNodedotjs />,
   express: <SiExpress />,
+  wordpress: <SiWordpress />,
+  woo: <SiWoocommerce />,
+  elementor: <SiElementor />,
+  plugin: <FaPuzzlePiece />,
+  agent: <FaRobot />,
+  llm: <FaBrain />,
+  vibe: <FaWandMagicSparkles />,
+  review: <FaCodePullRequest />,
+  github: <SiGithub />,
+  api: <FaServer />,
+  mysql: <SiMysql />,
+  rag: <FaDatabase />,
+  mcp: <FaPlug />,
+  chat: <FaComments />,
+  prompt: <FaKeyboard />,
+  terminal: <FaTerminal />,
 };
 
 export default function Skills() {
@@ -30,17 +64,22 @@ export default function Skills() {
       <div className="container">
         <Reveal className="section-head">
           <span className="eyebrow">Skills</span>
-          <h2 className="primaryText">My technical toolkit</h2>
+          <h2 className="primaryText">Tools I reach for every day</h2>
           <p className="secondaryText">
-            {profile.yearsExperience} years of hands-on work across the front end and the back end.
+            From Laravel and React to RAG, MCP and AI agents: {profile.yearsExperience} years of shipping,
+            with the review habits that keep it all solid.
           </p>
         </Reveal>
 
         <div className="skills-grid">
           {skills.map((group, gi) => (
-            <Reveal key={group.group} className="skill-group" delay={gi * 120}>
+            <Reveal
+              key={group.group}
+              className={`skill-group${group.wide ? " wide" : ""}`}
+              delay={(gi % 2) * 120}
+            >
               <h3>
-                {group.group} <span>Development</span>
+                {group.group} {group.sub && <span>{group.sub}</span>}
               </h3>
               <ul>
                 {group.items.map((item) => {

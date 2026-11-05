@@ -7,12 +7,13 @@ export const profile = {
   name: "Shabbir Ahmad Shahid",
   shortName: "Shabbir",
   initials: "SA",
-  role: "Full-Stack Developer",
-  tagline: "Laravel & React.js",
+  role: "Full-Stack Developer & AI Engineer",
+  tagline: "Laravel · React · WordPress · AI\u00A0Agents",
   intro:
-    "I build fast, scalable web applications end to end — from clean, responsive React interfaces to solid Laravel and Node.js back ends.",
+    "I build web apps, WordPress sites and AI that does real work: RAG chatbots, autonomous agents and MCP integrations. I develop with AI agents and custom skills, then review every line before it ships.",
   photo: "./profile.png", // TODO: replace with your own photo if this is a stock image
-  yearsExperience: "3+",
+  yearsExperience: "6+",
+  projectsCount: "20+",
   location: "Pakistan", // TODO: city, country
   availability: "Open to new opportunities",
   cvUrl: "", // TODO: e.g. "./Shabbir-Ahmad-CV.pdf" (put the file in /public). Button hides while empty.
@@ -29,6 +30,7 @@ export const profile = {
 export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
+  { id: "ai", label: "AI" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
@@ -37,33 +39,111 @@ export const navLinks = [
 
 export const about = {
   paragraphs: [
-    "I'm a full-stack web developer with more than three years of experience turning ideas into reliable, production-ready websites and web apps. My main stack is Laravel on the back end and React.js on the front end.",
-    "I care about clean code, fast load times and interfaces that feel simple to use. Whether it's a business website, an admin dashboard or a custom API, I like owning the whole journey: planning, building, testing and deploying.",
+    "Hey, I'm Shabbir. I've spent 6+ years building for the web and shipped 20+ projects, from Laravel back ends and React front ends to WordPress and WooCommerce sites that business owners can run on their own.",
+    "Today a big part of my work is AI. I build RAG chatbots that answer from a company's own documents instead of making things up, agents that call tools and APIs to finish multi-step tasks, and MCP servers that connect AI models to real apps and databases.",
+    "AI is also how I build. I work in Claude Code with custom skills and subagents that plan, write, test and research in parallel, with MCP connections to docs, GitHub and the browser. That lets me deliver in days what used to take weeks.",
+    "Speed is only worth it if the code holds up, so I'm strict about quality. Every change, whether I wrote it, a teammate did or an AI did, gets a proper review for bugs, security and maintainability before it goes live.",
   ],
   // TODO: tweak these to match the work you most want to be hired for.
   services: [
     {
-      icon: "frontend",
-      title: "Frontend Development",
-      text: "Responsive, accessible interfaces in React.js, HTML, CSS and modern JavaScript.",
-    },
-    {
-      icon: "backend",
-      title: "Backend & APIs",
-      text: "Secure REST APIs, authentication and business logic with Laravel, PHP, Node.js and Express.",
-    },
-    {
       icon: "fullstack",
       title: "Full-Stack Web Apps",
-      text: "Complete products from database design to deployment, built to scale and easy to maintain.",
+      text: "Dashboards, portals and SaaS products with Laravel and React, including REST APIs, payments and third-party integrations.",
+    },
+    {
+      icon: "wordpress",
+      title: "WordPress & WooCommerce",
+      text: "Fast, easy-to-edit business sites and online stores, plus custom themes and plugins when off-the-shelf won't cut it.",
+    },
+    {
+      icon: "chat",
+      title: "AI Chatbots with RAG",
+      text: "Support and sales assistants trained on your docs, FAQs and data, so answers are accurate, sourced and on-brand.",
+    },
+    {
+      icon: "ai",
+      title: "AI Agents & MCP",
+      text: "Agents that use tools, call APIs and complete real tasks, connected to your systems through Model Context Protocol servers.",
+    },
+    {
+      icon: "vibe",
+      title: "AI-Powered Development",
+      text: "Vibe coding done right: I turn ideas into working MVPs fast with AI agents and skills, then harden them for real users.",
+    },
+    {
+      icon: "review",
+      title: "Code Review",
+      text: "A second pair of eyes on pull requests and AI-written code: bugs, security holes, performance and readability.",
     },
   ],
 };
 
+// The "AI Engineering" section.
+export const ai = {
+  intro:
+    "I don't just use AI, I build with it and ship it. Here's what I make with AI, and the AI-first workflow I use to build everything else.",
+  builds: [
+    {
+      icon: "chat",
+      title: "RAG chatbots",
+      text: "Chatbots that answer from your own documents, website or database instead of guessing. I build the whole pipeline: chunking, embeddings, vector search and prompts that keep answers grounded and on-brand.",
+    },
+    {
+      icon: "agent",
+      title: "Autonomous agents",
+      text: "Agents that plan, call tools and APIs, and finish multi-step jobs on their own: qualifying leads, processing data, drafting replies and updating records.",
+    },
+    {
+      icon: "mcp",
+      title: "MCP servers",
+      text: "Model Context Protocol servers that plug AI assistants like Claude straight into your apps, databases and internal tools, so they can safely read and act on real data.",
+    },
+    {
+      icon: "spark",
+      title: "AI inside your product",
+      text: "AI features added to existing Laravel, React and WordPress apps: smart search, summaries, content generation and in-app assistants.",
+    },
+  ],
+  workflow: [
+    {
+      title: "Plan with AI",
+      text: "I turn the idea into a clear spec and task list with AI, catching edge cases before a line of code is written.",
+    },
+    {
+      title: "Build with agents & skills",
+      text: "I code in Claude Code with custom skills and subagents that research, build and test in parallel.",
+    },
+    {
+      title: "Connect through MCP",
+      text: "MCP gives my AI tools direct access to docs, databases, GitHub and the browser, so they work from real context, not guesses.",
+    },
+    {
+      title: "Review every line",
+      text: "AI writes fast; I make sure it's right. Each change gets a human code review, tests and a security check before it ships.",
+    },
+  ],
+  // TODO: remove anything you haven't used.
+  stack: [
+    "Claude API",
+    "OpenAI API",
+    "RAG",
+    "Embeddings",
+    "Vector search",
+    "MCP",
+    "Tool calling",
+    "Claude Code",
+    "Skills & subagents",
+    "Prompt engineering",
+  ],
+};
+
 // level: "Advanced" | "Intermediate" | "Learning"
+// TODO: check the levels, especially in the WordPress and AI groups.
 export const skills = [
   {
     group: "Frontend",
+    sub: "Development",
     items: [
       { name: "HTML5", icon: "html", level: "Advanced" },
       { name: "CSS3", icon: "css", level: "Advanced" },
@@ -73,11 +153,47 @@ export const skills = [
   },
   {
     group: "Backend",
+    sub: "Development",
     items: [
       { name: "PHP", icon: "php", level: "Advanced" },
       { name: "Laravel", icon: "laravel", level: "Advanced" },
       { name: "Node.js", icon: "node", level: "Intermediate" },
       { name: "Express.js", icon: "express", level: "Intermediate" },
+    ],
+  },
+  {
+    group: "WordPress",
+    sub: "Sites & Stores",
+    items: [
+      { name: "WordPress", icon: "wordpress", level: "Advanced" },
+      { name: "WooCommerce", icon: "woo", level: "Advanced" },
+      { name: "Elementor", icon: "elementor", level: "Advanced" },
+      { name: "Custom Themes & Plugins", icon: "plugin", level: "Intermediate" },
+    ],
+  },
+  {
+    group: "Code",
+    sub: "Quality & Workflow",
+    items: [
+      { name: "Code Review", icon: "review", level: "Advanced" },
+      { name: "Git & GitHub", icon: "github", level: "Advanced" },
+      { name: "REST APIs", icon: "api", level: "Advanced" },
+      { name: "MySQL", icon: "mysql", level: "Advanced" },
+    ],
+  },
+  {
+    group: "AI",
+    sub: "Engineering",
+    wide: true,
+    items: [
+      { name: "AI Agents", icon: "agent", level: "Advanced" },
+      { name: "RAG", icon: "rag", level: "Advanced" },
+      { name: "MCP Servers", icon: "mcp", level: "Advanced" },
+      { name: "Chatbots", icon: "chat", level: "Advanced" },
+      { name: "LLM APIs", icon: "llm", level: "Advanced" },
+      { name: "Prompt Engineering", icon: "prompt", level: "Advanced" },
+      { name: "Claude Code", icon: "terminal", level: "Advanced" },
+      { name: "Skills & Subagents", icon: "vibe", level: "Advanced" },
     ],
   },
 ];
@@ -104,32 +220,33 @@ export const experience = [
   },
 ];
 
-// TODO: replace with your real projects. Put screenshots in /public.
+// TODO: these describe the kind of work you've done. Rename them to your real
+// projects, fix the details, add screenshots in /public and live/code links.
 export const projects = [
   {
-    name: "Project one",
+    name: "AI Support Chatbot (RAG)",
     description:
-      "TODO: One or two sentences on what it does, who it's for and your role in it.",
+      "A support assistant that answers customer questions from the company's own docs and FAQs, shows its sources, and hands off to a human when it isn't sure.",
     image: "./web-design-3411373_1280.webp",
-    tags: ["Laravel", "React", "MySQL"],
+    tags: ["RAG", "Embeddings", "LLM API", "Laravel"],
     live: "",
     code: "",
   },
   {
-    name: "Project two",
+    name: "AI Agent with MCP Tools",
     description:
-      "TODO: One or two sentences on what it does, who it's for and your role in it.",
+      "An agent that connects to business tools through MCP servers, looks up data, runs multi-step tasks and reports back, turning hours of manual work into minutes.",
     image: "./web-development-coding-cross-platform-260nw-1128653108.webp",
-    tags: ["React", "Node.js", "Express"],
+    tags: ["AI Agents", "MCP", "Tool calling", "Node.js"],
     live: "",
     code: "",
   },
   {
-    name: "Project three",
+    name: "Laravel + React Web App",
     description:
-      "TODO: One or two sentences on what it does, who it's for and your role in it.",
+      "A full-stack business app with a Laravel API, a React dashboard, user roles, payments and third-party integrations, built with an AI-assisted workflow and fully code-reviewed.",
     image: "./web-design-3411373_1280.webp",
-    tags: ["PHP", "Laravel"],
+    tags: ["Laravel", "React", "MySQL", "REST API"],
     live: "",
     code: "",
   },

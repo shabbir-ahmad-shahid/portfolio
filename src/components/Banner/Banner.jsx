@@ -9,10 +9,10 @@ export default function Banner() {
       <div className="container">
         <Reveal className="banner">
           <div>
-            <h2>Have a project in mind?</h2>
+            <h2>Got an idea, a stuck project or code that needs a second look?</h2>
             <p>
-              I&apos;m {profile.availability.toLowerCase()}. Let&apos;s turn your idea into a fast,
-              reliable web app.
+              Website, web app, AI agent or code review, I&apos;m happy to help. I&apos;m{" "}
+              {profile.availability.toLowerCase()}, so let&apos;s talk.
             </p>
           </div>
           <a href="#contact" className="button banner-btn">

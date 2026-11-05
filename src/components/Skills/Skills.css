@@ -11,6 +11,14 @@
   border-radius: var(--radius);
 }
 
+.skill-group.wide {
+  grid-column: 1 / -1;
+}
+
+.skill-group.wide ul {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .skill-group h3 {
   font-size: 1.3rem;
   color: var(--ink);
@@ -68,6 +76,12 @@
 
 .skill-level.advanced { color: var(--accent); }
 
+@media (max-width: 1024px) {
+  .skill-group.wide ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 860px) {
   .skills-grid {
     grid-template-columns: 1fr;
@@ -78,7 +92,8 @@
   .skill-group {
     padding: 1.4rem;
   }
-  .skill-group ul {
+  .skill-group ul,
+  .skill-group.wide ul {
     grid-template-columns: 1fr;
   }
 }

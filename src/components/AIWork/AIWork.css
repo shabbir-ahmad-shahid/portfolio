@@ -1,0 +1,131 @@
+/* Dark section so the AI work stands out from the rest of the page. */
+.ai-section {
+  --ai-text: #d6d4ce;
+  --ai-muted: #a3a19a;
+  --ai-card: #262624;
+  --ai-line: rgba(255, 255, 255, 0.1);
+  --ai-accent: #fb923c;
+  background: var(--ink);
+  color: var(--ai-text);
+}
+
+.ai-section .eyebrow { color: var(--ai-accent); }
+.ai-section .primaryText { color: #fff; }
+.ai-section .secondaryText { color: var(--ai-muted); }
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.ai-col-title {
+  margin-bottom: 1.2rem;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.ai-builds {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ai-card {
+  padding: 1.5rem;
+  background: var(--ai-card);
+  border: 1px solid var(--ai-line);
+  border-radius: var(--radius);
+  transition: border-color 200ms ease;
+}
+
+.ai-card:hover {
+  border-color: var(--ai-accent);
+}
+
+.ai-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  color: var(--ai-accent);
+  background: rgba(251, 146, 60, 0.12);
+}
+
+.ai-card h4,
+.ai-workflow h4 {
+  font-size: 1.05rem;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+
+.ai-card p,
+.ai-workflow p {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: var(--ai-muted);
+}
+
+.ai-workflow {
+  padding: 1.8rem;
+  border: 1px solid var(--ai-line);
+  border-radius: var(--radius);
+}
+
+.ai-workflow ol {
+  list-style: none;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.ai-workflow li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+
+.ai-step {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ai-accent);
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+  min-width: 1.5rem;
+}
+
+.ai-stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 3rem;
+}
+
+.ai-stack li {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ai-text);
+  border: 1px solid var(--ai-line);
+  border-radius: 6px;
+}
+
+@media (max-width: 960px) {
+  .ai-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .ai-builds {
+    grid-template-columns: 1fr;
+  }
+  .ai-workflow {
+    padding: 1.4rem;
+  }
+}
