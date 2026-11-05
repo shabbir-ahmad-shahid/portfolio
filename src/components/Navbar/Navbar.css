@@ -3,9 +3,7 @@
   top: 0;
   z-index: 50;
   height: var(--nav-h);
-  background: rgba(250, 250, 247, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--bg);
   border-bottom: 1px solid transparent;
   transition: border-color 250ms ease, box-shadow 250ms ease;
 }
@@ -68,7 +66,11 @@
   border: none;
   color: var(--ink);
   cursor: pointer;
-  padding: 0.4rem;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-right: -0.5rem;
 }
 
 .n-backdrop {
