@@ -1,49 +1,98 @@
-import "./Hero.css"
-import { MdEmail } from "react-icons/md";
-import { FaLinkedin } from "react-icons/fa6";
-import { FaSquarePhoneFlip } from "react-icons/fa6";
+import { FaArrowRight, FaDownload, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { GiTrophyCup } from "react-icons/gi";
+import { SiLaravel, SiReact } from "react-icons/si";
+import { profile, projects, skills } from "../../data/profile";
+import "./Hero.css";
 
 export default function Hero() {
+  const techCount = skills.reduce((n, g) => n + g.items.length, 0);
+  const stats = [
+    { value: profile.yearsExperience, label: "Years experience" },
+    { value: `${projects.length}+`, label: "Projects built" },
+    { value: techCount, label: "Core technologies" },
+  ];
+  const socials = [
+    { href: profile.contact.linkedin, label: "LinkedIn", icon: <FaLinkedin /> },
+    { href: profile.contact.github, label: "GitHub", icon: <FaGithub /> },
+    { href: `mailto:${profile.contact.email}`, label: "Email", icon: <FaEnvelope /> },
+  ].filter((s) => s.href);
+
   return (
-    <section className='h-wrapper'>
-        <div className="paddings flexCenter innerWidth h-container">
-            {/* left side */}
-            <div className="flexColStart h-left">
-                <h3 className='primaryText hero-title'><span>Hi, I`m a</span> <br />website developer</h3>
-                <p className='secondaryText descriptiption'>Passionate Laravel & React.js Developer | Full-Stack Developer 
-               
-                <br /> Crafting Scalable Web Solutions for Optimal User Experiences,
-                <br />Open to New Opportunities.</p>
-                <div className="flexStart h-button">
-                    <button className='button'>Got a project?</button>
-                    <button className='button talk'>Let`s talk</button>
-                </div>
+    <section className="h-wrapper" id="home">
+      <div className="container h-container">
+        <div className="h-left">
+          <span className="h-badge">
+            <span className="dot" aria-hidden="true" /> {profile.availability}
+          </span>
+          <h1 className="h-title">
+            <span>Hi, I&apos;m {profile.shortName}</span>
+            <br />
+            {profile.role}
+          </h1>
+          <p className="h-tagline">{profile.tagline}</p>
+          <p className="secondaryText h-intro">{profile.intro}</p>
 
-                <div className="flexCenter stats">
-                    
-                    <div className="flexStart state">
-                        <span className="icon"><FaSquarePhoneFlip /></span>
-                        <span className="secondaryText">03498695879</span>
-                    </div>
-                    <div className="flexStart state">
-                        <span className="icon"><MdEmail /></span>
-                        <span className="secondaryText">shabbir789shahid@gmail.com</span>
-                    </div>
-                    <div className="flexStart state">
-                        <span className="icon"><FaLinkedin /></span>
-                        <span className="secondaryText">LinkedIn</span>
-                    </div>
-                </div>
+          <div className="h-buttons">
+            <a href="#contact" className="button">
+              Let&apos;s talk <FaArrowRight />
+            </a>
+            <a href="#projects" className="button outline">
+              View my work
+            </a>
+            {profile.cvUrl && (
+              <a href={profile.cvUrl} className="button outline" download>
+                <FaDownload /> CV
+              </a>
+            )}
+          </div>
 
+          {socials.length > 0 && (
+            <div className="h-socials">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  aria-label={s.label}
+                  target={s.href.startsWith("http") ? "_blank" : undefined}
+                  rel="noreferrer"
+                >
+                  {s.icon}
+                </a>
+              ))}
             </div>
-            {/* right side */}
-            <div className="flexCenter image-container">
-                <div className="triangle"><GiTrophyCup /></div>
-               <div className="circle"><GiTrophyCup /></div>
-                <img src="./profile.png" alt='profile' width={100} />
-            </div>
+          )}
+
+          <dl className="h-stats">
+            {stats.map((s) => (
+              <div key={s.label}>
+                <dt>{s.value}</dt>
+                <dd>{s.label}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
+
+        <div className="h-right">
+          <div className="image-container">
+            <img src={profile.photo} alt={profile.name} />
+          </div>
+          <div className="float-badge b-top">
+            <span className="b-icon"><GiTrophyCup /></span>
+            <span>
+              <strong>{profile.yearsExperience} years</strong>
+              <small>Building for the web</small>
+            </span>
+          </div>
+          <div className="float-badge b-bottom">
+            <span className="b-icon laravel"><SiLaravel /></span>
+            <span className="b-icon react"><SiReact /></span>
+            <span>
+              <strong>Laravel + React</strong>
+              <small>Full-stack</small>
+            </span>
+          </div>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
