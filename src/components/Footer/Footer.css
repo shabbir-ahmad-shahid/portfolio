@@ -1,0 +1,89 @@
+.f-wrapper {
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.f-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+}
+
+.f-name {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.f-name .monogram {
+  background: #fff;
+  color: var(--ink);
+}
+
+.f-brand p {
+  margin-top: 0.4rem;
+  font-size: 0.92rem;
+}
+
+.f-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+}
+
+.f-links a {
+  font-size: 0.95rem;
+  transition: color 200ms ease;
+}
+
+.f-links a:hover {
+  color: #fff;
+}
+
+.f-socials {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.f-socials a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  transition: background 200ms ease;
+}
+
+.f-socials a:hover {
+  background: var(--accent);
+}
+
+.f-copy {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 1.2rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+  .f-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .f-name {
+    justify-content: center;
+  }
+  .f-links {
+    justify-content: center;
+  }
+}

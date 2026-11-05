@@ -1,30 +1,29 @@
-import Navbar from "./components/Navbar/Navbar.jsx"
+import Navbar from "./components/Navbar/Navbar.jsx";
 import Hero from "./components/Hero/Hero.jsx";
-import About from './components/About/About.jsx';
-import Service from "./components/services/Service.jsx";
-import Portfolio from "./components/portfolio/Portfolio.jsx";
-import Banner from "./components/banner/Banner.jsx";
-import Contact from "./components/contact/Contact.jsx";
-import Testimonial from "./components/testimonial/Testimonial.jsx";
-import Footer from "./components/footer/Footer.jsx";
-function App() {
- 
+import About from "./components/About/About.jsx";
+import Skills from "./components/Skills/Skills.jsx";
+import Experience from "./components/Experience/Experience.jsx";
+import Projects from "./components/Projects/Projects.jsx";
+import Banner from "./components/Banner/Banner.jsx";
+import Testimonials from "./components/Testimonials/Testimonials.jsx";
+import Contact from "./components/Contact/Contact.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+
+export default function App() {
   return (
     <>
-    <div className="hero-image">
       <Navbar />
-      <Hero />
-      <About />
-      <Service />
-      <Portfolio />
-      <Banner />
-      <Contact />
-      <Testimonial />
-      <Footer /> 
-    </div>
-      
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Banner />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
-
-export default App
