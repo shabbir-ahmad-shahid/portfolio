@@ -67,6 +67,7 @@
 
 .h-buttons .button {
   flex: 0 1 auto;
+  white-space: nowrap;
   padding: 0.9rem 1.7rem;
   font-size: 1rem;
 }
@@ -185,8 +186,10 @@
   background: var(--accent-soft);
 }
 .b-icon.laravel,
-.b-icon.react { color: var(--ink); background: var(--surface-alt); }
-.b-icon.react { margin-left: -0.3rem; }
+.b-icon.react,
+.b-icon.wp { color: var(--ink); background: var(--surface-alt); }
+.b-icon.react,
+.b-icon.wp { margin-left: -0.3rem; }
 
 @media (max-width: 1100px) {
   .b-top { left: -4%; }
@@ -218,7 +221,8 @@
   .h-stats { gap: 1.5rem; }
   .h-stats dt { font-size: 1.6rem; }
   .h-buttons { width: 100%; }
-  .h-buttons .button { flex: 1 1 140px; }
+  .h-buttons .button { flex: 1 1 140px; padding-inline: 1.1rem; }
+  .h-tagline { font-size: 1.05rem; }
   /* badges sit under the photo instead of covering it */
   .h-right {
     display: flex;

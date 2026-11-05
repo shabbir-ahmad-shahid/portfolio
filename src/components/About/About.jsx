@@ -1,12 +1,22 @@
-import { FaCode, FaLayerGroup, FaServer } from "react-icons/fa6";
+import {
+  FaCodePullRequest,
+  FaComments,
+  FaLayerGroup,
+  FaRobot,
+  FaWandMagicSparkles,
+  FaWordpress,
+} from "react-icons/fa6";
 import { about, profile } from "../../data/profile";
 import Reveal from "../Reveal";
 import "./About.css";
 
 const serviceIcons = {
-  frontend: <FaCode />,
-  backend: <FaServer />,
   fullstack: <FaLayerGroup />,
+  wordpress: <FaWordpress />,
+  ai: <FaRobot />,
+  vibe: <FaWandMagicSparkles />,
+  review: <FaCodePullRequest />,
+  chat: <FaComments />,
 };
 
 export default function About() {
@@ -35,27 +45,27 @@ export default function About() {
             {about.paragraphs.map((p, i) => (
               <p key={i} className="secondaryText">{p}</p>
             ))}
-            <dl className="about-facts">
-              {facts.map((f) => (
-                <div key={f.label}>
-                  <dt>{f.label}</dt>
-                  <dd>{f.value}</dd>
-                </div>
-              ))}
-            </dl>
           </Reveal>
 
-          <div className="about-services">
-            {about.services.map((s, i) => (
-              <Reveal key={s.title} className="service-card" delay={i * 120}>
-                <span className="service-icon">{serviceIcons[s.icon]}</span>
-                <div>
-                  <h3>{s.title}</h3>
-                  <p className="secondaryText">{s.text}</p>
-                </div>
-              </Reveal>
+          <Reveal as="dl" className="about-facts" delay={120}>
+            {facts.map((f) => (
+              <div key={f.label}>
+                <dt>{f.label}</dt>
+                <dd>{f.value}</dd>
+              </div>
             ))}
-          </div>
+          </Reveal>
+        </div>
+
+        <h3 className="services-title">How I can help</h3>
+        <div className="about-services">
+          {about.services.map((s, i) => (
+            <Reveal key={s.title} className="service-card" delay={(i % 3) * 120}>
+              <span className="service-icon">{serviceIcons[s.icon]}</span>
+              <h4>{s.title}</h4>
+              <p className="secondaryText">{s.text}</p>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

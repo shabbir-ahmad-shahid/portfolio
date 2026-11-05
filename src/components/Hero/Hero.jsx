@@ -1,15 +1,14 @@
-import { FaArrowRight, FaDownload, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
-import { GiTrophyCup } from "react-icons/gi";
-import { SiLaravel, SiReact } from "react-icons/si";
-import { profile, projects, skills } from "../../data/profile";
+import { FaArrowRight, FaDownload, FaEnvelope, FaGithub, FaLinkedin, FaRobot } from "react-icons/fa6";
+import { SiLaravel, SiReact, SiWordpress } from "react-icons/si";
+import { profile, skills } from "../../data/profile";
 import "./Hero.css";
 
 export default function Hero() {
   const techCount = skills.reduce((n, g) => n + g.items.length, 0);
   const stats = [
     { value: profile.yearsExperience, label: "Years experience" },
-    { value: `${projects.length}+`, label: "Projects built" },
-    { value: techCount, label: "Core technologies" },
+    { value: profile.projectsCount, label: "Projects delivered" },
+    { value: techCount, label: "Skills & tools" },
   ];
   const socials = [
     { href: profile.contact.linkedin, label: "LinkedIn", icon: <FaLinkedin /> },
@@ -77,18 +76,19 @@ export default function Hero() {
             <img src={profile.photo} alt={profile.name} />
           </div>
           <div className="float-badge b-top">
-            <span className="b-icon"><GiTrophyCup /></span>
+            <span className="b-icon"><FaRobot /></span>
             <span>
-              <strong>{profile.yearsExperience} years</strong>
-              <small>Building for the web</small>
+              <strong>RAG · MCP · Agents</strong>
+              <small>AI that does real work</small>
             </span>
           </div>
           <div className="float-badge b-bottom">
             <span className="b-icon laravel"><SiLaravel /></span>
             <span className="b-icon react"><SiReact /></span>
+            <span className="b-icon wp"><SiWordpress /></span>
             <span>
-              <strong>Laravel + React</strong>
-              <small>Full-stack</small>
+              <strong>Laravel · React · WP</strong>
+              <small>Full-stack & WordPress</small>
             </span>
           </div>
         </div>
